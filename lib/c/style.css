@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'EdmondsansBoldRegular';
+    src: url('../f/edmondsans-bold-webfont.eot');
+    src: url('../f/edmondsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../f/edmondsans-bold-webfont.woff') format('woff'),
+         url('../f/edmondsans-bold-webfont.ttf') format('truetype'),
+         url('../f/edmondsans-bold-webfont.svg#EdmondsansBoldRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EdmondsansMediumRegular';
+    src: url('../f/edmondsans-medium-webfont.eot');
+    src: url('../f/edmondsans-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../f/edmondsans-medium-webfont.woff') format('woff'),
+         url('../f/edmondsans-medium-webfont.ttf') format('truetype'),
+         url('../f/edmondsans-medium-webfont.svg#EdmondsansMediumRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EdmondsansRegularRegular';
+    src: url('../f/edmondsans-regular-webfont.eot');
+    src: url('../f/edmondsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../f/edmondsans-regular-webfont.woff') format('woff'),
+         url('../f/edmondsans-regular-webfont.ttf') format('truetype'),
+         url('../f/edmondsans-regular-webfont.svg#EdmondsansRegularRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#bio {
+	background: @white;
+	border-radius: @global-radius;
+	border: 1px solid;
+	width: @bio-width;
+	position: absolute;
+	top: 50%;
+	margin-top: -145px;
+	font-family: 'EdmondsansRegularRegular';
+}
+
+body {
+	background: #f2f2f2;
+}
+
+.subtitle {
+	color: @medium-grey;
+	font-size: @small-font-size;
+	width: 100%;
+	text-align: center;
+}
+
+
