@@ -43,14 +43,79 @@ body {
 	font-family: 'EdmondsansRegularRegular';
 }
 
+.data {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 /* Sections */
 
 #bio {
 	position: absolute;
+	top: 50%;
+	left: 60px;
+	margin: -145px 0 0 0;
 	width: 260px;
-	height: 289px;
+	height: 290px;
 	
 	background: #ffffff;
 	border: 1px solid #cccccc;
 	border-radius: 7px;
+	
+	-webkit-animation: bio-expand-animation 1s ease-in-out 0.2s 1;
+	-moz-animation: bio-expand-animation 1s ease-in-out 0.2s 1;
+	-ms-animation: bio-expand-animation 1s ease-in-out 0.2s 1;
+	animation: bio-expand-animation 1s ease-in-out 0.2s 1;
+}
+
+#bio-content {
+	-webkit-animation: bio-content-fade-in 1s ease-in-out 0.6s 1;
+	-moz-animation: bio-content-fade-in 1s ease-in-out 0.6s 1;
+	-ms-animation: bio-content-fade-in 1s ease-in-out 0.6s 1;
+	animation: bio-content-fade-in 1s ease-in-out 0.6s 1;
+}
+
+#avatar {
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	margin: 0 0 0 -67px;
+	width: 125px;
+	height: 125px;
+	
+	background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=125');
+	box-shadow: 0 0 4px rgba(0,0,0,0.7);
+}
+
+/* Animation Definitions */
+
+@-webkit-keyframes bio-expand-animation {
+	0% {
+		height: 0;
+		margin-top: 0px;
+	} 100% {
+		height: 290px;
+		margin-top: -145px;
+	}
+}
+@-moz-keyframes bio-expand-animation {
+	0% {
+		height: 0;
+		margin-top: 0px;
+	} 100% {
+		height: 290px;
+		margin-top: -145px;
+	}
+}
+@-ms-keyframes bio-expand-animation {
+	0% {
+		height: 0;
+		margin-top: 0px;
+	} 100% {
+		height: 290px;
+		margin-top: -145px;
+	}
 }
