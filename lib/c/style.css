@@ -34,12 +34,12 @@
 
 h1 {
 	font-family: "EdmondsansMediumRegular", Arial, Verdana, sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .subtitle {
 	color: #787878;
-	font-size: 13px
+	font-size: 14px
 }
 
 /* Broad CSS */
@@ -51,6 +51,8 @@ body {
 	background: #f2f2f2;
 
 	font-family: 'EdmondsansRegularRegular';
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 .data {
@@ -74,12 +76,16 @@ body {
 	background: #ffffff;
 	border: 1px solid #cccccc;
 	border-radius: 7px;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+	box-shadow: 0 2px 2px rgba(0,0,0,0.1);
 	
-	-webkit-animation: bio-expand-animation 1s ease-in-out 0.2s 1;
-	-moz-animation: bio-expand-animation 1s ease-in-out 0.2s 1;
-	-ms-animation: bio-expand-animation 1s ease-in-out 0.2s 1;
-	animation: bio-expand-animation 1s ease-in-out 0.2s 1;
+	-webkit-animation: bio-expand-animation 2.5s ease-in-out 0.2s 1;
+	-moz-animation: bio-expand-animation 2.5s ease-in-out 0.2s 1;
+	-ms-animation: bio-expand-animation 2.5s ease-in-out 0.2s 1;
+	animation: bio-expand-animation 2.5s ease-in-out 0.2s 1;
+	
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-ms-animation: both;
 }
 
 #bio-content {
@@ -106,7 +112,7 @@ body {
 
 #info {
 	position: absolute;
-	top: 156px;
+	top: 140px;
 	bottom: 0;
 	width: 100%;
 }
@@ -135,8 +141,7 @@ body {
 	width: 100%;
 	height: 100%;
 	
-	background-image: url('../i/twitter-sprite.png');
-	background-position: bottom left;
+	background: url('../i/twitter-sprite.png') bottom left;
 	opacity: 0;
 
 	-webkit-transition: all 0.2s ease-in-out;
@@ -146,14 +151,61 @@ body {
 	opacity: 1;
 }
 
+#email {
+	position: absolute;
+	top: 50%;
+	margin: 200px 0 0 0;
+	left: 109px;
+	width: 166px;
+	height: 34px;
+	
+	background: url('../i/email-sprite.png') top left;
+	
+	-webkit-animation: email-flutter 1s ease-in-out 0.2s 1;
+	-moz-animation: email-flutter 1s ease-in-out 0.2s 1;
+	-ms-animation: email-flutter 1s ease-in-out 0.2s 1;
+	animation: email-flutter 1s ease-in-out 0.2s 1;
+	
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-ms-animation: both;
+}
+
+#email .hover {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	
+	background: url('../i/email-sprite.png') bottom left;
+	opacity: 0;
+	
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+#email:hover .hover {
+	opacity: 1;
+}
+
 /* Browser Specific */
 
-.webkit #bio-content {
+.webkit #bio, .mozilla #bio {
+	height: 0;
+}
+
+.webkit #bio-content, .mozilla #bio-content {
 	opacity: 0;
 }
 
-.mozilla #bio-content {
-	opacity: 0;
+#line {
+	position: absolute;
+	top:50%;
+	left: 321px;
+	width: 100%;
+	margin: -1px 0 0 0;
+	height: 2px;
+	
+	background: #cccccc;
 }
 
 /* Animation Definitions */
@@ -162,9 +214,11 @@ body {
 	0% {
 		height: 0;
 		margin-top: 0px;
+		box-shadow: 0 0 0 rgba(0,0,0,0.1);
 	} 100% {
 		height: 289px;
 		margin-top: -145px;
+		box-shadow: 0 2px 2px rgba(0,0,0,0.1);
 	}
 }
 @-moz-keyframes bio-expand-animation {
@@ -174,6 +228,7 @@ body {
 	} 100% {
 		height: 289px;
 		margin-top: -145px;
+		box-shadow: 0 2px 2px rgba(0,0,0,0.1);
 	}
 }
 @-ms-keyframes bio-expand-animation {
@@ -183,6 +238,7 @@ body {
 	} 100% {
 		height: 289px;
 		margin-top: -145px;
+		box-shadow: 0 2px 2px rgba(0,0,0,0.1);
 	}
 }
 
@@ -202,6 +258,32 @@ body {
 	}
 }
 @-ms-keyframes bio-content-fade-in {
+	0% {
+		opacity: 0;
+	} 100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes email-flutter {
+	0% {
+		opacity: 0;
+		margin: 100px 0 0 0;
+		-webkit-transform: scale3d(0.6, 0.6, 0.6);
+	} 100% {
+		opacity: 1;
+		margin: 200px 0 0 0;
+		-webkit-transform: scale3d(1, 1, 1);
+	}
+}
+@-moz-keyframes email-flutter {
+	0% {
+		opacity: 0;
+	} 100% {
+		opacity: 1;
+	}
+}
+@-ms-keyframes email-flutter {
 	0% {
 		opacity: 0;
 	} 100% {
