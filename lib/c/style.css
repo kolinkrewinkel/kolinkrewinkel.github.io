@@ -46,6 +46,8 @@ h1 {
 body {
 	padding: 0;
 	margin: 0;
+	overflow-x: auto;
+	overflow-y: hidden;
 
 	background: #f2f2f2;
 
@@ -65,12 +67,13 @@ body {
 /* Sections */
 
 #bio {
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 60px;
 	margin: -145px 0 0 0;
 	width: 260px;
 	height: 289px;
+	z-index: 600;
 	
 	background: #ffffff;
 	border: 1px solid #cccccc;
@@ -151,12 +154,13 @@ body {
 }
 
 #email {
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	margin: 200px 0 0 0;
 	left: 109px;
 	width: 166px;
 	height: 34px;
+	z-index: 600;
 	
 	background: url('../i/email-sprite.png') top left;
 	
@@ -206,18 +210,20 @@ body {
 
 #works {
 	position: relative;
-	top: 0;
+	top: -57px;
 	left: 0;
 	width: auto;
 	height: 100%;
 	margin: 0;
+	white-space: nowrap;
 	
 	list-style: none;
+	z-index: 500;
 }
 
 #line {
 	position: absolute;
-	top:50%;
+	top:0;
 	left: 0;
 	width: 100%;
 	margin: 0 0 0 0;
@@ -227,17 +233,24 @@ body {
 }
 
 .works-entry {
+	display: inline-block;
+	margin: 0 57px 0 57px;
+	float: left;
 	width: 114px;
 	height: 200px;
-	margin: 0 57px 0 57px;
-
+	
 	text-indent: -99999px;
+	
+	-webkit-transform-origin: center 57px;
+	-moz-transform-origin: center 57px;
+	-ms-transform-origin: center 57px;
+	transform-origin: center 57px;
 	
 	-webkit-animation: item-expand 1s ease-in-out 1.2s 1;
 	-moz-animation: item-expand 1s ease-in-out 1.2s 1;
 	-ms-animation: item-expand 1s ease-in-out 1.2s 1;
 	animation: item-expand 1s ease-in-out 1.2s 1;
-	
+		
 	-webkit-animation-fill-mode: both;
 	-moz-animation-fill-mode: both;
 	-ms-animation-fill-mode: both;
@@ -252,6 +265,32 @@ body {
 	
 	background: #cccccc;
 	border-radius: 20px;
+}
+
+.list-ender {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	
+	background: #cccccc;
+	border-radius: 10px;
+}
+
+#content-mask {
+	position: fixed;
+	top: 0;
+	left: 310px;
+	width: 60px;
+	height: 100%;
+	z-index: 550;
+
+	background: url('../i/blend.png') repeat-y;
+}
+
+/* List Items */
+
+#current-icon {
+	background-image: url('../i/current-icon.png');
 }
 
 /* Animation Definitions */
@@ -367,6 +406,8 @@ body {
 
 @-webkit-keyframes item-expand {
 	0% {
+		width: 0;
+		height: 0;
 		opacity: 0;
 		margin: 0 0 0 0;
 		-webkit-transform: scale3d(0.6, 0.6, 0.6);
@@ -375,10 +416,12 @@ body {
 		margin: 0 57px 0 57px;
 		-webkit-transform: scale3d(1, 1, 1);
 		width: 114px;
+		height: 200px;
 	}
 }
 @-moz-keyframes item-expand {
 	0% {
+		width: 0;
 		opacity: 0;
 		margin: 0 0 0 0;
 		-webkit-transform: scale3d(0.6, 0.6, 0.6);
@@ -390,6 +433,7 @@ body {
 }
 @-ms-keyframes item-expand {
 	0% {
+		width: 0;
 		opacity: 0;
 		margin: 0 0 0 0;
 		-webkit-transform: scale3d(0.6, 0.6, 0.6);
