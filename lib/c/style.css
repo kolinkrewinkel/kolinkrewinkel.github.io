@@ -279,8 +279,8 @@ body {
 #content-mask {
 	position: fixed;
 	top: 0;
-	left: 310px;
-	width: 60px;
+	left: 0;
+	width: 360px;
 	height: 100%;
 	z-index: 550;
 
