@@ -125,6 +125,14 @@ body {
 	text-align: center;
 }
 
+#name {
+	margin-bottom: 0;
+}
+
+#work {
+	margin-top: 13px;
+}
+
 #twitter {
 	position: absolute;
 	bottom: 0;
