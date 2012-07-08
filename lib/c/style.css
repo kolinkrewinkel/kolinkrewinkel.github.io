@@ -291,7 +291,7 @@ body {
 }
 
 .rounded {
-	border-radius: none;
+	border-radius: 0;
 }
 
 .icon:hover {
