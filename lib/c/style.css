@@ -290,6 +290,10 @@ body {
 	-ms-transition: all 0.2s;
 }
 
+.rounded {
+	border-radius: none;
+}
+
 .icon:hover {
 	-webkit-transform: scale3d(1.05,1.05,1.05);
 	-moz-transform: scale3d(1.05,1.05,1.05);
