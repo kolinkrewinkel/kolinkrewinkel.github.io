@@ -349,14 +349,36 @@ body {
 
 .popover {
 	display: inline-block;
-	min-width: 335px;
-	min-height: 57px;
+	width: 335px;
+	height: 57px;
 	
 	background: #ffffff;
 	border: #cccccc solid 1pt;
 	border-radius: 10px;
 
 	-webkit-transition: all 0.2s;
+}
+
+.arrow {
+	position: relative;
+	top: -10px;
+	width: 18px;
+	height: 10px;
+	
+	background: url('../i/arrow.png');
+}
+
+.arrow-center .arrow {
+	left: 50%;
+	margin: 0 0 0 -9px;
+}
+
+.arrow-left .arrow {
+	left: 22px;
+}
+
+.arrow-right .arrow {
+	left: 295px;
 }
 
 .popover-hidden {
