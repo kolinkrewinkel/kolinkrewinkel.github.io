@@ -218,7 +218,7 @@ body {
 	top: 50%;
 	left: 321px;
 	margin: 0 0 0 0;
-	height: 200px;
+	height: 114px;
 	width: auto;
 }
 
@@ -251,7 +251,7 @@ body {
 	display: inline-block;
 	margin: 0 57px 0 57px;
 	width: 114px;
-	height: 200px;
+	height: 114px;
 	z-index: 600;
 	
 	text-indent: -99999px;
@@ -332,6 +332,45 @@ body {
 	animation: none;
 }
 
+/* Popovers */
+
+#sub-content {
+	position: absolute;
+	top: 50%;
+	left: 360px;
+	margin: 150px 0 0 0;
+	width: auto;
+}
+
+#popovers {
+	width: auto;
+	white-space: nowrap;
+}
+
+.popover {
+	display: inline-block;
+	min-width: 335px;
+	min-height: 57px;
+	
+	background: #ffffff;
+	border: #cccccc solid 1pt;
+	border-radius: 10px;
+
+	-webkit-transition: all 0.2s;
+}
+
+.popover-hidden {
+	opacity: 0;
+	-webkit-transform: scale3d(1.1, 1.1, 1.1);
+	margin-top: -50px;
+}
+
+.popover-visible {
+	opacity: 1;
+	-webkit-transform: -webkit-transform-identity;
+	margin-top: 0;
+}
+
 /* Browser Specifics */
 
 .webkit #bio {
@@ -374,6 +413,17 @@ body {
 
 #threepalms-icon {
 	background-image: url('../i/threepalms-icon.png');
+}
+
+/* Individual Popovers */
+
+#current-popover {
+	
+}
+
+#bitlimit-popover {
+	position: absolute;
+	left: 100px;
 }
 
 /* Animation Definitions */
@@ -503,7 +553,7 @@ body {
 		margin: 0 57px 0 57px;
 		-webkit-transform: scale3d(1, 1, 1);
 		width: 114px;
-		height: 200px;
+		height: 114px;
 	}
 }
 @-moz-keyframes item-expand {
@@ -522,7 +572,7 @@ body {
 		margin: 0 57px 0 57px;
 		-moz-transform: scale3d(1, 1, 1);
 		width: 114px;
-		height: 200px;
+		height: 114px;
 	}
 }
 @-ms-keyframes item-expand {
@@ -541,6 +591,6 @@ body {
 		margin: 0 57px 0 57px;
 		-ms-transform: scale3d(1, 1, 1);
 		width: 114px;
-		height: 200px;
+		height: 144px;
 	}
 }
