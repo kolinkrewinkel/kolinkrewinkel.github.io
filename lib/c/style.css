@@ -127,17 +127,22 @@ body {
 
 #name {
 	margin-bottom: 0;
+	font-weight: 600;
+	color: #252525;
 }
 
 #work {
 	margin-top: 4px;
+	font-weight: 100;
 }
 
 #twitter {
 	position: absolute;
 	bottom: 0;
-	width: 100%;
-	height: 44px;
+	width: 262px;
+	height: 47px;
+	top: 249px;
+	margin-left: -1px;
 	
 	background-image: url('../i/twitter-sprite.png');
 	background-position: top left;
@@ -148,9 +153,9 @@ body {
 #twitter .active {
 	position: absolute;
 	top: 0;
-	width: 100%;
-	height: 100%;
-	
+	width: 262px;
+	height: 47px;
+	margin-top: -1px;
 	background: url('../i/twitter-sprite.png') bottom left;
 	opacity: 0;
 
@@ -164,7 +169,7 @@ body {
 #email {
 	position: fixed;
 	top: 50%;
-	margin: 165px 0 0 0;
+	margin-top: 180px;
 	left: 109px;
 	width: 166px;
 	height: 34px;
@@ -279,8 +284,6 @@ body {
 	width: 114px;
 	height: 114px;
 	z-index: inherit;
-	
-	border-radius: 20px;
 
 	-webkit-transition: all 0.2s;
 	-webkit-backface-visibility: hidden;
@@ -401,11 +404,15 @@ body {
 	position: relative;
 	top: 0;
 	left: 0;
-	margin: 5px 0 0 15px;
+	margin: 9px 0 0 15px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #252525;
 }
 
 .work-name .date {
 	color: #787878;
+	font-weight: 100;
 }
 
 .popover .subtitle {
@@ -482,6 +489,7 @@ body {
 
 #current-icon {
 	background-image: url('../i/current-icon.png');
+	height: 116px; width: 116px;
 }
 
 #bitlimit-icon {
@@ -490,6 +498,7 @@ body {
 
 #kkgridview-icon {
 	background-image: url('../i/kkgridview-icon.png');
+	height: 114px; width: 114px;
 }
 
 #nhd-icon-2 {
@@ -498,10 +507,12 @@ body {
 
 #openhome-icon {
 	background-image: url('../i/ohp-icon.png');
+	border-radius: 19px;
 }
 
 #stratus-icon {
 	background-image: url('../i/stratus-icon.png');
+	border-radius: 19px;
 }
 
 #nhd-icon-1 {
@@ -628,7 +639,7 @@ body {
 		-webkit-transform: scale3d(0.6, 0.6, 0.6);
 	} 65% {
 		opacity: 1;
-		margin: 165px 0 0 0;
+		margin: 180px 0 0 0;
 		-webkit-transform: scale3d(1.02, 1.02, 1.02);
 	} 100% {
 		-webkit-transform: scale3d(1, 1, 1);
@@ -641,7 +652,7 @@ body {
 		-moz-transform: scale3d(0.6, 0.6, 0.6);
 	} 65% {
 		opacity: 1;
-		margin: 165px 0 0 0;
+		margin: 180px 0 0 0;
 		-moz-transform: scale3d(1.02, 1.02, 1.02);
 	} 100% {
 		-moz-transform: scale3d(1, 1, 1);
@@ -654,7 +665,7 @@ body {
 		-ms-transform: scale3d(0.6, 0.6, 0.6);
 	} 65% {
 		opacity: 1;
-		margin: 165px 0 0 0;
+		margin: 180px 0 0 0;
 		-ms-transform: scale3d(1.02, 1.02, 1.02);
 	} 100% {
 		-ms-transform: scale3d(1, 1, 1);
