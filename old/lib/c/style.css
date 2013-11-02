@@ -487,6 +487,10 @@ body {
 
 /* List Items */
 
+#stream-icon {
+	background: url('../i/stream-icon.png');
+}
+
 #current-icon {
 	background-image: url('../i/current-icon.png');
 	height: 116px; width: 116px;
