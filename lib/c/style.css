@@ -150,14 +150,97 @@ body {
 
 /* Portfolio */
 
-#portfolio {
+#portfolio-container
+{
 	position: absolute;
 	top: 0;
-	left: 321px;
+	left: 0;
+	right: 0;
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	width: auto;
+}
+
+#portfolio
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 300%; /* 100 * number of panels */
+	height: 100%;
 
 	list-style: none;
+}
+
+.standin
+{
+	position: relative;
+	float: left;
+	top: 0;
+	width: 33.33%; /* 100 / Number of panels */
+	height: 1px;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+}
+
+.work
+{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* Portfolio Items */
+
+/* Stream */
+
+#stream
+{
+	padding: 10% 0 0 400px;
+
+	background-color: #000000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), to(rgb(51, 51, 51)));
+	background-image: -webkit-linear-gradient(top, rgb(0, 0, 0), rgb(51, 51, 51));
+	background-image: -moz-linear-gradient(top, rgb(0, 0, 0), rgb(51, 51, 51));
+	background-image: -o-linear-gradient(top, rgb(0, 0, 0), rgb(51, 51, 51));
+	background-image: -ms-linear-gradient(top, rgb(0, 0, 0), rgb(51, 51, 51));
+	background-image: linear-gradient(top, rgb(0, 0, 0), rgb(51, 51, 51));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#333333');
+
+	font-family: "HelveticaNeue-Light", sans-serif;
+	font-size: 18pt;
+	font-weight: 300;
+	color: #ffffff;
+}
+
+#stream-title
+{
+	margin: 0;
+}
+
+#stream-description
+{
+	margin: 0;
+
+}
+
+#bitlimit
+{
+	background-color: red;
+
+	
+}
+
+#kkgridview
+{
+	background: blue;
+
+	
 }
