@@ -10,6 +10,13 @@ h1 {
 
 /* Broad CSS */
 
+html
+{
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
 body {
 	padding: 0;
 	margin: 0;
@@ -21,8 +28,6 @@ body {
 	font-family: 'Lato';
 	font-size: 13.5pt;
 	font-weight: 300;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
 }
 
 .data {
@@ -172,6 +177,8 @@ body {
 	height: 100%;
 
 	list-style: none;
+
+	z-index: 0;
 }
 
 .standin
@@ -197,14 +204,33 @@ body {
 	padding: 0;
 }
 
+.work-background
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	z-index: -10;
+}
+
 /* Portfolio Items */
 
 /* Stream */
 
 #stream
 {
-	padding: 10% 0 0 400px;
+	padding: 0 0 0 321px;
 
+	font-family: "HelveticaNeue-Light", sans-serif !important;
+	font-size: 26pt !important;
+	font-weight: 300 !important;
+	color: #ffffff !important;
+}
+
+#stream-background
+{
 	background-color: #000000;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), to(rgb(51, 51, 51)));
 	background-image: -webkit-linear-gradient(top, rgb(0, 0, 0), rgb(51, 51, 51));
@@ -213,11 +239,36 @@ body {
 	background-image: -ms-linear-gradient(top, rgb(0, 0, 0), rgb(51, 51, 51));
 	background-image: linear-gradient(top, rgb(0, 0, 0), rgb(51, 51, 51));
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#333333');
+}
 
-	font-family: "HelveticaNeue-Light", sans-serif;
-	font-size: 18pt;
-	font-weight: 300;
-	color: #ffffff;
+#stream-container
+{
+	position: relative;
+	top: 0;
+	left: 15%;
+	width: 70%;
+	height: 100%;
+
+	overflow: visible;
+}
+
+#stream-description
+{
+	position: relative;
+	top: 50%;
+
+  	-webkit-transform: translate(0, -50%);
+	float: left;
+	z-index: 1001;
+}
+
+#stream-icon
+{
+	float: right;
+	width: 130px;
+	height: 130px;
+
+	background: url('../i/stream-icon.png') no-repeat;
 }
 
 #stream-title
@@ -225,13 +276,35 @@ body {
 	margin: 0;
 }
 
-#stream-description
+#stream-subtitle
 {
 	margin: 0;
+	opacity: 0.6;
 
+	font-size: 0.6em;
 }
 
-#bitlimit
+#stream-extended-description
+{
+	width: 280px;
+	opacity: 0.4;
+
+	font-size: 0.5em;
+}
+
+#stream-hero
+{
+	position: relative;
+	top: 50%;
+	margin: -1123px 0 0 350px;
+	width: 1182px;
+	height: 2144px;
+	display: inline-block;
+
+  	background: url('../i/stream-iphone-alt.png');
+}
+
+#bitlimit-background
 {
 	background-color: red;
 
