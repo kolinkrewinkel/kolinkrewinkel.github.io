@@ -52,7 +52,7 @@ body {
 	background: #ffffff;
 	border: 1px solid #cccccc;
 	border-radius: 7px;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 2px rgba(0,0,0,0.7);
 }
 
 #bio-content {
