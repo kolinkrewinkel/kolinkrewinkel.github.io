@@ -304,11 +304,94 @@ body {
   	background: url('../i/stream-iphone-alt.png');
 }
 
-#bitlimit-background
-{
-	background-color: red;
+/* Current */
 
-	
+#current
+{
+	padding: 0 0 0 321px;
+
+	color: #555e68;
+	font-family: "HelveticaNeue", sans-serif !important;
+	font-size: 26pt !important;
+	font-weight: 300 !important;
+}
+
+#current-title, #current-subtitle
+{
+	background: -webkit-linear-gradient(#555e68, #a3a9ad);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#current-background
+{
+	background: linear-gradient(-110deg, rgba(255,255,255,0.4), rgba(255,255,255,0.15) 34.5%, transparent 34.5%), #e9f0f4;
+}
+
+#current-description
+{
+	position: relative;
+	top: 50%;
+
+  	-webkit-transform: translate(0, -50%);
+	float: left;
+	z-index: 1001;	
+}
+
+#current-container
+{
+	position: relative;
+	top: 0;
+	left: 15%;
+	width: 70%;
+	height: 100%;
+}
+
+#current-icon
+{
+	float: left;
+	width: 116px;
+	height: 116px;
+	margin: 0 16px 15px 0;
+
+	background: url('../i/current-icon.png');
+}
+
+#current-title
+{
+	margin: 10px 0 0 0;
+
+	font-weight: bold;
+}
+
+#current-subtitle
+{
+	margin: -2px 0 0 0;
+	opacity: 0.7;
+
+	font-size: 0.7em;
+}
+
+#current-extended-description
+{
+	clear: both;
+	width: 300px;
+	padding: 0 4px 0 4px;
+	color: #a2a9ad;
+
+	font-size: 0.5em;
+}
+
+#current-hero
+{
+	position: relative;
+	top: 50%;
+	margin: -493px 0 0 320px;
+	width: 709px;
+	height: 1488px;
+	display: inline-block;
+
+	background: url('../i/current-hero.png');
 }
 
 #kkgridview
