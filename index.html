@@ -45,20 +45,22 @@
 				<div id="info">
 					<h1 id="name">Kolin Krewinkel</h1>
 					<h2 class="subtitle" id="work">Software Developer</h2>
+
+					<p id="longform-bio"></p>
 				</div>
 				
 				<a id="twitter" href="http://kolinkrewinkel.com/twitter/"></a>
 			</div>
 
 			<a href="https://alpha.app.net/kolin" rel="me" style="display: none"></a>
+			<a id="email" href="http://kolinkrewinkel.com/email/"></a>
 		</div>
 		
-		<a id="email" href="http://kolinkrewinkel.com/email/"></a>
 		
 		<div id="portfolio-container">
 			<ol id="portfolio">
 				<li id="stream" class="work">
-					<div id="stream-container">
+					<div id="stream-container" class="work-container">
 						<section id="stream-description">
 							<div id="stream-icon"></div>
 							<p id="stream-title">Stream</p>
@@ -71,7 +73,7 @@
 					</div>
 				</li>
 				<li id="current" class="work">
-					<div id="current-container">
+					<div id="current-container" class="work-container">
 						<section id="current-description">
 							<div id="current-icon"></div>
 							<p id="current-title">Current</p>
@@ -84,7 +86,17 @@
 					</div>
 				</li>
 				<li id="kkgridview" class="work">
-					
+					<div id="kkgridview-container" class="work-container">
+						<section id="kkgridview-description">
+							<header id="kkgridview-heading">
+								<p id="kkgridview-title">KKGridView</p>
+								<p id="kkgridview-subtitle">Open source grid for iOS.</p>
+							</header>
+							<div id="kkgridview-hero"></div>
+							
+							<p id="kkgridview-extended-description">Before iOS 6, Apple didn't have a collection view.<br>Third-party grid views were awful.<br>We changed that.<br>At 60 FPS.</p>
+						</section>
+					</div>
 				</li>
 
 				<li id="stream-standin" class="standin"></li>
@@ -94,6 +106,7 @@
 
 			<div id="stream-background" class="work-background"></div>
 			<div id="current-background" class="work-background"></div>	
+			<div id="kkgridview-background" class="work-background"></div>
 		</div>
 	</body>
 </html>
