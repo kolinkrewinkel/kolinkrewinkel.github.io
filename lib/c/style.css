@@ -30,14 +30,6 @@ body {
 	font-weight: 300;
 }
 
-.data {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
 /* Sections */
 
 #bio {
@@ -53,25 +45,21 @@ body {
 }
 
 #bio-content {
+	position: absolute;
+	top: 50%;
+  	-webkit-transform: translate(0, -50%);
+  	width: 100%;
 }
 
-#avatar {
-	position: absolute;
-	top: -10px;
-	left: 50%;
-	margin: 0 0 0 -67px;
-	width: 125px;
-	height: 125px;
+#avatar
+{
+	position: relative;
+	width: 140px;
+	height: 140px;
+	left: 60px;
 	
-	background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=125');
+	background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=140');
 	box-shadow: 0 0 4px rgba(0,0,0,0.7);
-}
-
-#info {
-	position: absolute;
-	top: 140px;
-	bottom: 0;
-	width: 100%;
 }
 
 #name, #work {
@@ -81,7 +69,7 @@ body {
 }
 
 #name {
-	margin: 100px auto 0 auto;
+	margin: 10px auto 0 auto;
 	font-weight: 600;
 }
 
