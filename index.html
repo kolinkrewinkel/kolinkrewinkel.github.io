@@ -5,7 +5,7 @@
 		<title>Kolin Krewinkel — Software Developer</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="keywords" content="twitter, iphone, ios, ipad, app, development, programmer, node, javascript, java">
+		<meta name="keywords" content="iphone, facebook, twitter, ios, ipad, app, apple, development, programmer, node, javascript, java">
 		<meta name="description" content="The portfolio of Kolin Krewinkel, a software developer from California.">
 		<meta name="subject" content="Kolin Krewinkel's Portfolio">
 		<meta name="copyright"content="Kolin Krewinkel 2013">
@@ -15,7 +15,7 @@
 		<meta name="reply-to" content="desk@kolinkrewinkel.com">
 		<meta name="owner" content="Kolin Krewinkel">
 		<meta name="url" content="http://www.kolinkrewinkel.com">
-		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.5">
 
 		<!-- CSS -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
@@ -23,6 +23,7 @@
 
 		<!-- Javascript -->
 		<script type="text/javascript" src="lib/j/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 	  	<script type="text/javascript" src="lib/j/jquery.superscrollorama.js"></script>
 	  	<script type="text/javascript" src="lib/j/greensock/TweenMax.min.js"></script>
 		<script type="text/javascript" src="lib/j/magic.js"></script>
@@ -44,21 +45,27 @@
 				<header id="avatar"></header>
 				<div id="info">
 					<h1 id="name">Kolin Krewinkel</h1>
-					<h2 class="subtitle" id="work">Software Developer</h2>
+					<h2 id="work">Software Developer</h2>
 
 					<p id="longform-bio"></p>
 				</div>
-				
-				<a id="twitter" href="http://kolinkrewinkel.com/twitter/"></a>
 			</div>
 
 			<a href="https://alpha.app.net/kolin" rel="me" style="display: none"></a>
-			<a id="email" href="http://kolinkrewinkel.com/email/"></a>
 		</div>
-		
-		
-		<div id="portfolio-container">
+			
 			<ol id="portfolio">
+				<li id="facebook" class="work">
+					<div id="facebook-container" class="work-container">
+						<div id="facebook-description">
+							<div id="facebook-logo"></div>
+							<p id="facebook-title">Facebook</p>
+							<p id="facebook-subtitle">Connect.</p>
+
+							<p id="facebook-extended-description">In the summer of 2014, I'll be interning with Facebook's iOS Engineering team.<br><br>Working with some of the most skilled in the industry, I'll have a hand in crafting products that reach hundreds of millions of people.</p>
+						</section>
+					</div>
+				</li>
 				<li id="stream" class="work">
 					<div id="stream-container" class="work-container">
 						<section id="stream-description">
@@ -72,6 +79,8 @@
 						<div id="stream-hero"></div>
 					</div>
 				</li>
+
+				<!--
 				<li id="current" class="work">
 					<div id="current-container" class="work-container">
 						<section id="current-description">
@@ -99,14 +108,10 @@
 					</div>
 				</li>
 
-				<li id="stream-standin" class="standin"></li>
-				<li id="current-standin" class="standin"></li>
-				<li id="kkgridview-standin" class="standin"></li>
-			</ol>
+			-->
 
-			<div id="stream-background" class="work-background"></div>
-			<div id="current-background" class="work-background"></div>	
-			<div id="kkgridview-background" class="work-background"></div>
-		</div>
+			</ol>
+		<div id="facebook-background" class="work-background"></div>
+		<div id="stream-background" class="work-background"></div>
 	</body>
 </html>

@@ -1,36 +1,21 @@
-h1 {
-	font-size: 1.2em;
-	font-weight: 700;
-}
-
-.subtitle {
-	color: #787878;
-	font-size: 1em;
-}
-
 /* Broad CSS */
-
-html
-{
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-}
 
 body {
 	padding: 0;
 	margin: 0;
-	overflow-x: auto;
-	overflow-y: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;	
 
-	background: #ebebeb;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 
 	font-family: 'Lato';
 	font-size: 13.5pt;
 	font-weight: 300;
 }
 
-/* Sections */
+/* Bio */
 
 #bio {
 	position: fixed;
@@ -39,9 +24,11 @@ body {
 	width: 260px;
 	height: 100%;
 	z-index: 700;
-	
-	background: #ffffff;
-	border: 1px solid #cccccc;
+
+	background: rgba(0, 0, 0, 0.6);
+
+	color: white;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.62);
 }
 
 #bio-content {
@@ -54,12 +41,12 @@ body {
 #avatar
 {
 	position: relative;
-	width: 140px;
-	height: 140px;
-	left: 60px;
+	width: 160px;
+	height: 160px;
+	left: 50px;
 	
-	background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=140');
-	box-shadow: 0 0 4px rgba(0,0,0,0.7);
+	background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=160');
+	box-shadow: 0 1px 2px rgba(0,0,0,0.62);
 }
 
 #name, #work {
@@ -71,83 +58,18 @@ body {
 #name {
 	margin: 10px auto 0 auto;
 	font-weight: 600;
+
+	font-size: 1.25em;
 }
 
 #work {
 	margin: 0;
+	
+	font-size: 1em;
 	font-weight: 300;
 }
 
-#twitter {
-	position: absolute;
-	bottom: 0;
-	width: 262px;
-	height: 47px;
-	top: 249px;
-	margin-left: -1px;
-	
-	background-image: url('../i/twitter-sprite.png');
-	background-position: top left;
-	
-	-webkit-transition: all 0.2s;
-}
-
-#twitter .active {
-	position: absolute;
-	top: 0;
-	width: 262px;
-	height: 47px;
-	margin-top: -1px;
-	background: url('../i/twitter-sprite.png') bottom left;
-	opacity: 0;
-
-	-webkit-transition: all 0.2s;
-}
-
-#twitter:active .active {
-	opacity: 1;
-}
-
-#email {
-	position: fixed;
-	top: 50%;
-	margin-top: 180px;
-	left: 109px;
-	width: 166px;
-	height: 34px;
-	z-index: 700;
-	
-	background: url('../i/email-sprite.png') top left;
-}
-
-#email .active {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	
-	background: url('../i/email-sprite.png') bottom left;
-	opacity: 0;
-	
-	-webkit-transition: all 0.2s;
-}
-
-#email:active .active {
-	opacity: 1;
-}
-
 /* Portfolio */
-
-#portfolio-container
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-	height: 100%;
-}
 
 #portfolio
 {
@@ -156,35 +78,26 @@ body {
 	left: 0;
 	margin: 0;
 	padding: 0;
-	width: 300%; /* 100 * number of panels */
-	height: 100%;
+	width: 100%; 
+	height: 400%; /* 100 * number of panels */
 
 	list-style: none;
 
 	z-index: 0;
 }
 
-.standin
-{
-	position: relative;
-	float: left;
-	top: 0;
-	width: 33.33%; /* 100 / Number of panels */
-	height: 1px;
-	margin: 0;
-	padding: 0;
-	visibility: hidden;
-}
-
 .work
 {
-	position: fixed;
+	position: relative;
 	left: 0;
-	top: 0;
 	width: 100%;
-	height: 100%;
+	height: 25%;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 0 260px;
+
+	/*overflow: hidden;*/
+
+	z-index: 5;
 }
 
 .work-background
@@ -195,21 +108,75 @@ body {
 	width: 100%;
 	height: 100%;
 
+	/*background-attachment: f;*/
+
 	z-index: -10;
 }
 
 .work-container
 {
-	position: relative;
 	top: 0;
-	left: 15%;
-	width: 70%;
+	left: 0;
+	width: 100%;
 	height: 100%;
 
 	overflow: visible;
 }
 
 /* Portfolio Items */
+
+/* Facebook */
+
+#facebook-background
+{
+	background: url('../i/fb-bg8.jpg') no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#facebook
+{
+	color: white;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+	font-family: 'Lucida Grande', 'HelveticaNeue', 'Verdana', sans-serif;
+}
+
+#facebook-description
+{
+	position: absolute;
+	left: 370px;	
+	bottom: 40px;
+	width: 260px;	
+}
+
+#facebook-title
+{
+	margin: 10px 0 0 0;
+	font-weight: bold;
+	font-size: 1.75em;
+}
+
+#facebook-subtitle
+{
+	color: rgba(250, 250, 250, 1);
+	margin: 0;
+
+	font-size: 1.1em;
+}
+
+#facebook-logo
+{
+	/*float: left;*/
+	width: 114px;
+	height: 114px;
+
+	background: url('../i/facebook-logo.png');
+
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+	border-radius: 7px;
+}
 
 /* Stream */
 
@@ -239,6 +206,7 @@ body {
 {
 	position: relative;
 	top: 50%;
+	left: 321px;
 
   	-webkit-transform: translate(0, -50%);
 	float: left;
@@ -455,3 +423,21 @@ body {
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2)
+{
+	#avatar
+	{
+		background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=320');
+		background-size: 100% 100%;
+	}
+    	
+	#facebook-logo
+	{
+		background: url('../i/facebook-logo@2x.png');
+		background-size: 100% 100%;
+	}
+}
