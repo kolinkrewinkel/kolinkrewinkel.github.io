@@ -327,7 +327,7 @@ body {
 	height: 116px;
 	margin: 0 16px 15px 0;
 
-	background: url('../i/current-icon.png');
+	background: url('../i/current-icon.png') no-repeat;
 }
 
 #current-title
@@ -367,7 +367,7 @@ body {
 	height: 1488px;
 	display: inline;
 
-	background: url('../i/current-hero.png');
+	background: url('../i/current-hero.png') no-repeat;
 
 	-webkit-backface-visibility: hidden;
 }
@@ -404,7 +404,7 @@ body {
 	left: 391px;
 	right: 391px;
 
-	padding: 0 20px 0 20px;	
+	padding: 0;
 }
 
 #kkgridview-description
@@ -487,6 +487,18 @@ only screen and (min-device-pixel-ratio: 2)
 		background-size: 100% 100%;
 	}
 
+	#avatar
+	{
+		background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=320');
+		background-size: 100% 100%;
+	}
+    	
+	#facebook-logo
+	{
+		background: url('../i/facebook-logo@2x.png');
+		background-size: 100% 100%;
+	}
+
 	#stream-icon
 	{
 		background-size: 65px 65px;
@@ -501,15 +513,20 @@ only screen and (min-device-pixel-ratio: 2)
 		background-size: 100% 100%;
 	}
 
-	#avatar
+	#current-hero
 	{
-		background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=320');
+		margin-top: -400px;
+		width: 355px;
+		height: 744px;
+
 		background-size: 100% 100%;
 	}
-    	
-	#facebook-logo
+
+	#current-icon
 	{
-		background: url('../i/facebook-logo@2x.png');
+		width: 58px;
+		height: 58px;
+
 		background-size: 100% 100%;
 	}
 }
@@ -534,6 +551,8 @@ and (max-device-width : 480px) {
 	{
 		position: absolute;
 		width: 100%;
+
+		background: rgb(0, 0, 0);
 	}
 
 	#portfolio
@@ -547,13 +566,13 @@ and (max-device-width : 480px) {
 		bottom: 16px;
 	}
 
-	#stream-spacer
+	#stream-spacer, #current-spacer
 	{
 		width: 0;
 		min-width: 0;
 	}
 
-	#stream-description
+	#stream-description, #current-description
 	{
 		/*top: 16px;*/
 		left: 16px;
@@ -567,7 +586,7 @@ and (max-device-width : 480px) {
 		width: 100%;
 	}
 
-	#stream-extended-description
+	#stream-extended-description, #current-extended-description
 	{
 		width: 100%;
 	}
@@ -576,6 +595,36 @@ and (max-device-width : 480px) {
 	{
 		width: 90px;
 		background-position: left center;
+	}	
+
+	#current-icon
+	{
+		margin: 0 8px 0 0;
+	}
+
+	#current-title
+	{
+		margin-top: -10px;
+	}
+
+	#kkgridview-description
+	{
+		font-size: 24pt;
+	}
+
+	#kkgridview-hero
+	{
+		width: 106px;
+		height: 141px;
+		display: block;
+
+		background-size: cover;
+		border-width: 2px;		
+	}
+
+	#kkgridview-small-screen-spacer
+	{
+		width: 0 !important;
 	}
 }
 
