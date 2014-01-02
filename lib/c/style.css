@@ -128,6 +128,35 @@ body {
 	overflow-y: visible;
 }
 
+#hint-arrow
+{
+	width: 100px;
+	height: 50px;
+
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+
+	opacity: 0.6;
+	background: url('../i/down-arrow.png') no-repeat;
+
+	-webkit-transition: 0.2s opacity ease-in-out;
+}
+
+#hint-arrow:hover
+{
+	opacity: 0.9 !important;
+	-webkit-transform: translate(0px, 1px);
+
+	cursor: pointer;
+}
+
+#hint-arrow:active
+{
+	opacity: 1.0 !important;
+	-webkit-transform: translate(0px, 2px);
+}
+
 /* Portfolio Items */
 
 /* Facebook */
@@ -467,6 +496,11 @@ body {
 	overflow: hidden !important;
 }
 
+.touch #hint-arrow
+{
+	display: none;
+}
+
 .touch #stream-hero
 {
 	margin-top: -1400px;
@@ -503,6 +537,7 @@ only screen and (min-device-pixel-ratio: 2)
 	{
 		background-size: 65px 65px;
 		height: 70px;
+		margin-top: 3px;
 	}
 
 	#stream-hero
@@ -524,11 +559,19 @@ only screen and (min-device-pixel-ratio: 2)
 
 	#current-icon
 	{
+		margin: 0 8px 0 0;
 		width: 58px;
 		height: 58px;
 
 		background-size: 100% 100%;
 	}
+
+	#current-title
+	{
+		margin-top: -10px;
+	}
+
+
 }
 
 /*
@@ -538,7 +581,6 @@ only screen and (min-device-pixel-ratio: 2)
  * 
  */
 
-/* Smartphones (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
@@ -551,13 +593,14 @@ and (max-device-width : 480px) {
 	{
 		position: absolute;
 		width: 100%;
+		height: 95%;
 
 		background: rgb(0, 0, 0);
 	}
 
 	#portfolio
 	{
-		top: 100%;
+		top: 95%;
 	}
 
 	#facebook-description
