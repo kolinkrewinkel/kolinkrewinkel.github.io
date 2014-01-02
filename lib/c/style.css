@@ -70,13 +70,68 @@ body
 	-webkit-transform: none;
 }
 
+.thin-arrow
+{
+	position: relative;
+	float: left;
+	top: 0;
+	width: 42px;
+	height: 160px;
+
+	opacity: 0.6;
+
+	-webkit-transition: all 0.2s;
+}
+
+#reveal-arrow
+{
+	background: url('../i/reveal-arrow.png') center center no-repeat;
+}
+
+#reveal-arrow:hover
+{
+	-webkit-transform: translate(1px, 0px);
+	opacity: 0.9;
+
+	cursor: pointer;
+}
+
+#hide-arrow
+{
+	opacity: 0;
+	visibility: hidden;
+
+	background: url('../i/hide-arrow.png') center center no-repeat;
+}
+
+.expanded-bio #hide-arrow:hover
+{
+	opacity: 0.9 !important;
+	-webkit-transform: translate(-1px, 0px) !important;
+
+	cursor: pointer;
+}
+
+.expanded-bio #hide-arrow
+{
+	opacity: 0.6;
+	visibility: visible;
+
+	z-index: 9999;
+}
+
+.expanded-bio #reveal-arrow
+{
+	opacity: 0;
+	visibility: hidden;
+}
+
 #avatar
 {
 	position: relative;
 	width: 160px;
 	height: 160px;
-	left: 50%;
-	margin-left: -80px;
+	float: left;
 	
 	background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=160');
 	box-shadow: 0 1px 2px rgba(0,0,0,0.62);
@@ -105,8 +160,8 @@ body
 #contact-links
 {
 	position: absolute;
-	left: 42px;
-	right: 42px;
+	left: 60px;
+	right: 60px;
 	height: 20px;
 	margin: 8px 0 0 0;
 	padding: 0;
@@ -120,7 +175,7 @@ body
 {
 	position: relative;
 	float: left;
-	width: 50%;
+	width: 33.3%;
 	height: 100%;
 	margin: 0;
 
@@ -158,6 +213,11 @@ body
 	background: url('../i/adn-logo.png') no-repeat center top;
 }
 
+#email
+{
+	background: url('../i/mail-logo.png') no-repeat center top;
+}
+
 #bio-extended
 {
 	position: fixed;
@@ -180,17 +240,68 @@ body
 
 	top: 48px;
 	left: 260px;
-	right: 260px;
+	right: 45%;
 	height: 160px;
-	/*margin: -128px 0 0 0;*/
+	margin: -8px 0 0 0;
 
 	text-align: left;
 	font-size: 1em;
-	vertical-align: middle;
+	line-height: 2em;
+	/*vertical-align: middle;*/
 
 	opacity: 0;
 
 	-webkit-transition: all 0.6s 2s;
+}
+
+#longform-bio .bold
+{
+	font-weight: bold;
+}
+
+#cover-images
+{
+	position: absolute;
+	width: 40%;
+	right: 0;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	opacity: 0;
+
+	list-style: none;
+
+	-webkit-transition: all 1s 2.5s;
+}
+
+.expanded-bio #cover-images
+{
+	opacity: 0.333;
+}
+
+.cover-image
+{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 50%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#c1
+{
+	background: url('../i/c1.jpg') no-repeat 20% 20%;
+}
+
+#c2
+{
+	background: url('../i/c2.jpg') no-repeat center center;
+
 }
 
 .expanded-bio #longform-bio
@@ -658,6 +769,11 @@ body
 	margin-top: -1400px;
 }
 
+.expanded-bio .touch #portfolio
+{
+	height: 0;
+}
+
 /*
  *
  *  Retina Displays
@@ -677,6 +793,36 @@ only screen and (min-device-pixel-ratio: 2)
 	{
 		background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=320');
 		background-size: 100% 100%;
+	}
+
+	#reveal-arrow
+	{
+		background: url('../i/reveal-arrow@2x.png') center center no-repeat;
+		background-size: 12px 26px;
+	}
+
+	#hide-arrow
+	{		
+		background: url('../i/hide-arrow@2x.png') center center no-repeat;
+		background-size: 12px 26px;
+	}
+
+	#twitter
+	{
+		background: url('../i/twitter-logo@2x.png') no-repeat center top;
+		background-size: 25px 20px;
+	}
+
+	#appdotnet
+	{
+		background: url('../i/adn-logo@2x.png') no-repeat center top;
+		background-size: 20px 20px;
+	}
+
+	#email
+	{
+		background: url('../i/mail-logo@2x.png') no-repeat center top;
+		background-size: 30px 20px;
 	}
     	
 	#facebook-logo
@@ -722,6 +868,16 @@ only screen and (min-device-pixel-ratio: 2)
 	{
 		margin-top: -10px;
 	}
+
+	#c1
+	{
+		-webkit-background-size: 500px 667px;
+	}
+
+	#c2
+	{
+		-webkit-background-size: 500px 667px;
+	}
 }
 
 /*
@@ -746,6 +902,11 @@ and (max-device-width : 480px) {
 		height: 95%;
 
 		background: rgb(0, 0, 0);
+	}
+
+	#bio-content
+	{
+		width: 100%;
 	}
 
 	#portfolio
