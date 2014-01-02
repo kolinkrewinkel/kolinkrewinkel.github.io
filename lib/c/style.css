@@ -507,7 +507,7 @@ only screen and (min-device-pixel-ratio: 2)
     	
 	#facebook-logo
 	{
-		background: url('../i/facebook-logo@2x.jpg');
+		background: url('../i/facebook-logo@2x.png');
 		background-size: 100% 100%;
 	}
 }
