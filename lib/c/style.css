@@ -58,8 +58,9 @@ body
 #bio-content {
 	position: absolute;
 	top: 50%;
-  	-webkit-transform: translate(0, -50%);
+  	margin-top: -122px;
 	width: 245px;
+	height: 244px;
 
   	-webkit-transition: 0.4s all;
 }
@@ -67,7 +68,7 @@ body
 .expanded-bio #bio-content
 {
 	top: 48px;
-	-webkit-transform: none;
+	margin-top: 0;
 }
 
 .thin-arrow
@@ -132,6 +133,7 @@ body
 	width: 160px;
 	height: 160px;
 	float: left;
+	margin-bottom: 8px;
 	
 	background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=160');
 	box-shadow: 0 1px 2px rgba(0,0,0,0.62);
@@ -144,7 +146,7 @@ body
 }
 
 #name {
-	margin: 10px auto 0 auto;
+	margin: 8px auto 0 auto;
 	font-weight: 600;
 
 	font-size: 1.25em;
@@ -179,7 +181,7 @@ body
 	height: 100%;
 	margin: 0;
 
-	opacity: 0.7;
+	opacity: 0.6;
 
 	-webkit-transition: all 0.2s;
 }
@@ -241,7 +243,6 @@ body
 	top: 48px;
 	left: 260px;
 	right: 45%;
-	height: 160px;
 	margin: -8px 0 0 0;
 
 	text-align: left;
@@ -769,9 +770,19 @@ body
 	margin-top: -1400px;
 }
 
-.expanded-bio .touch #portfolio
+.touch .work
 {
-	height: 0;
+	-webkit-transition: opacity 0.6s;
+}
+
+.touch.expanded-bio .work
+{
+	opacity: 0;
+}
+
+.touch.expanded-bio #portfolio
+{
+	top: 0 !important;
 }
 
 /*
@@ -901,12 +912,123 @@ and (max-device-width : 480px) {
 		width: 100%;
 		height: 95%;
 
-		background: rgb(0, 0, 0);
+		background: none !important;
+	}
+
+	#bio-iphone-dimmer
+	{
+		z-index: 10;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 95%;
+
+		background: rgba(0, 0, 0, 1);
+		-webkit-transition: all 0.4s;
+	}
+
+	.expanded-bio #bio-iphone-dimmer
+	{
+		position: fixed;
+		height: 100%;
+
+		opacity: 0.8;
 	}
 
 	#bio-content
 	{
+		width: 245px;
+		margin-left:-122px;
+		left:50%;
+
+		z-index: 9999;
+	}
+
+	.iphone-fade
+	{
+		-webkit-transition: opacity 0.4s;
+	}
+
+	.expanded-bio .iphone-fade
+	{
+		opacity: 0;
+
+		-webkit-transition-delay: 0.2s;
+	}
+
+	.expanded-bio #bio-content
+	{
+		position: fixed;
+		top: 50%;
+		left: 0;
+		margin: -80px 0 0 0;
+	}
+
+	.expanded-bio .contact-logo
+	{
+		float: none;
 		width: 100%;
+		height: 33.33%;
+	}
+
+	.expanded-bio .contact-logo a
+	{
+		background-position: center center !important;
+	}
+
+	.expanded-bio #contact-links
+	{
+		top: 0;
+		left: 45px;
+		height: 160px;
+		width: 40px;
+		margin: 0;
+	}
+
+	.expanded-bio #cover-images
+	{
+		display: none !important;
+	}
+
+	.expanded-bio #longform-bio
+	{
+		left: 105px;
+		right: 15px;
+		width: auto;
+	}
+	
+	#longform-bio
+	{
+		left: 100%;
+		width: auto;
+		
+		-webkit-transition-delay: 0s !important;
+		--webkit-transition-duration: 0.4s !important;
+	}
+
+	.expanded-bio #bio
+	{
+		position: absolute !important;
+		height: 100%;
+
+		z-index: 9999;
+	}
+
+	.expanded-bio #bio-extended
+	{
+		position: absolute !important;
+	}
+
+	.expanded-bio #bio-background
+	{
+		position: fixed !important;
+	}
+
+	.expanded-bio #portfolio
+	{
+		height: 0;
 	}
 
 	#portfolio

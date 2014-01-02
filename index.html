@@ -26,7 +26,6 @@
 		<script type="text/javascript" src="lib/j/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 		<script type="text/javascript" src="lib/j/modernizr.js"></script>
-		<script type="text/javascript" src="lib/j/requestAnimFrame.js"></script>
 	  	<script type="text/javascript" src="lib/j/jquery.superscrollorama.js"></script>
 	  	<script type="text/javascript" src="lib/j/greensock/TweenMax.min.js"></script>
 		<script type="text/javascript" src="lib/j/magic.js"></script>
@@ -46,9 +45,9 @@
 		<div id="bio">
 			<div id="bio-content">
 				<div id="hide-arrow" class="thin-arrow"></div>
-				<header id="avatar"></header>
+				<header id="avatar" class="iphone-fade"></header>
 				<div id="reveal-arrow" class="thin-arrow"></div>
-				<div id="info">
+				<div id="info" class="iphone-fade">
 					<h1 id="name">Kolin Krewinkel</h1>
 					<h2 id="work">Software Developer</h2>					
 				</div>			
@@ -61,7 +60,7 @@
 			</div>
 
 			<div id="bio-extended">
-				<p id="longform-bio">Greetings! My name's Kolin, and I'm software developer for iOS and Mac.<br>Experiences that leave users with a smile are my passion.<br><br>I started developing my first apps via a friend's computer and some laggy screen sharing software. Eventually, I got my own MacBook. <span class="bold">That's when everything changed.</span><br><br>At present, I'm seeking contract work until my internship at Facebook starts in the summer.</p>
+				<p id="longform-bio">Greetings! My name's Kolin, and I'm software developer for iOS and Mac.<br>Experiences that leave users with a smile are my passion.<br><br>I started developing my first apps via a friend's computer and some laggy screen sharing software. Eventually, I got my own MacBook. <span class="bold">That's when everything changed.</span><br><br>At present, I'm seeking contract work until my internship at Facebook starts in the summer.<br><br></p>
 
 				<ul id="cover-images">
 					<li class="cover-image" id="c1"></li>
@@ -72,6 +71,8 @@
 			<!-- ADN Verification (seperated because I don't want a direct link.) -->
 			<a href="https://alpha.app.net/kolin" rel="me" style="display: none"></a>
 		</div>
+
+		<div id="bio-iphone-dimmer"></div>
 		<div id="bio-background" class="work-background"></div>
 			
 			<ol id="portfolio">
