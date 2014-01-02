@@ -48,7 +48,8 @@ body {
 	position: relative;
 	width: 160px;
 	height: 160px;
-	left: 43px;
+	left: 50%;
+	margin-left: -80px;
 	
 	background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=160');
 	box-shadow: 0 1px 2px rgba(0,0,0,0.62);
@@ -494,6 +495,7 @@ only screen and (min-device-pixel-ratio: 2)
 
 	#stream-hero
 	{
+		margin-top: -590px !important;
 		width: 475px;
 		height: 1072px;
 		background-size: 100% 100%;
@@ -518,6 +520,64 @@ only screen and (min-device-pixel-ratio: 2)
  *	Discussion: Math is just too simple.
  * 
  */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.discardable
+	{
+		display: none;
+	}
+
+	#bio
+	{
+		position: absolute;
+		width: 100%;
+	}
+
+	#portfolio
+	{
+		top: 100%;
+	}
+
+	#facebook-description
+	{
+		left: 16px;
+		bottom: 16px;
+	}
+
+	#stream-spacer
+	{
+		width: 0;
+		min-width: 0;
+	}
+
+	#stream-description
+	{
+		/*top: 16px;*/
+		left: 16px;
+		width: 65%;
+		min-width: 175px;
+		margin-right: 16px;
+	}
+
+	#stream-limiter
+	{
+		width: 100%;
+	}
+
+	#stream-extended-description
+	{
+		width: 100%;
+	}
+
+	#stream-icon
+	{
+		width: 90px;
+		background-position: left center;
+	}
+}
 
 @media only screen 
 and (min-width : 1824px) {
