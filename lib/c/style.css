@@ -1,25 +1,34 @@
 /* Broad CSS */
 
-html
+html, body
 {
 	overflow-x: hidden;
-}
-
-body {
-	padding: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	margin: 0;
-	overflow-x: hidden;
-	overflow-y: auto;	
+	padding: 0;
 
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
+}
+
+body
+{
+	overflow-y: auto;	
 
 	font-family: 'Lato';
 	font-size: 13.5pt;
 	font-weight: 300;
 
 	background-color: black;
+}
+
+.expanded-bio, .expanded-bio body
+{
+	overflow-y: hidden;
 }
 
 /* Bio */
@@ -37,7 +46,7 @@ body {
 	color: white;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.62);
 
-	-webkit-transition: 0.2s all 0.7s;
+	-webkit-transition: 0.7s all 0.7s;
 }
 
 .expanded-bio #bio
@@ -52,12 +61,12 @@ body {
   	-webkit-transform: translate(0, -50%);
 	width: 245px;
 
-  	-webkit-transition: 0.2s all;
+  	-webkit-transition: 0.4s all;
 }
 
 .expanded-bio #bio-content
 {
-	top: 32px;
+	top: 48px;
 	-webkit-transform: none;
 }
 
@@ -93,9 +102,105 @@ body {
 	font-weight: 300;
 }
 
+#contact-links
+{
+	position: absolute;
+	left: 42px;
+	right: 42px;
+	height: 20px;
+	margin: 8px 0 0 0;
+	padding: 0;
+
+	list-style: none;
+
+	z-index: 2000;
+}
+
+.contact-logo
+{
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+	margin: 0;
+
+	opacity: 0.7;
+
+	-webkit-transition: all 0.2s;
+}
+
+.contact-logo:hover
+{
+	opacity: 0.9;
+}
+
+.contact-logo:active
+{
+	opacity: 1;
+}
+
+.contact-logo a
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#twitter
+{
+	background: url('../i/twitter-logo.png') no-repeat center top;
+}
+
+#appdotnet
+{
+	background: url('../i/adn-logo.png') no-repeat center top;
+}
+
+#bio-extended
+{
+	position: fixed;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	z-index: 300;
+}
+
+.expanded-bio #bio-extended
+{
+	top: 0;
+}
+
+#longform-bio
+{
+	position: absolute;
+
+	top: 48px;
+	left: 260px;
+	right: 260px;
+	height: 160px;
+	/*margin: -128px 0 0 0;*/
+
+	text-align: left;
+	font-size: 1em;
+	vertical-align: middle;
+
+	opacity: 0;
+
+	-webkit-transition: all 0.6s 2s;
+}
+
+.expanded-bio #longform-bio
+{
+	opacity: 1;
+}
+
 #bio-background
 {
-	visibility: hidden;;
+	visibility: hidden;
 	opacity: 0;
 
 	background: url('../i/desk-bg.jpg') no-repeat center center scroll;
@@ -104,7 +209,7 @@ body {
 	-o-background-size: cover;
 	background-size: cover;
 
-	z-index: 0;
+	z-index: 5;
 
 	-webkit-transition: all 0.75s 0.25s;
 }
@@ -120,8 +225,6 @@ body {
 .expanded-bio #portfolio
 {
 	top: 100%;
-
-	opacity: 0;
 }
 
 #portfolio
@@ -139,7 +242,7 @@ body {
 
 	z-index: 0;
 
-	-webkit-transition: all 0.85s;
+	-webkit-transition: all 0.85s 0s;
 }
 
 .work
@@ -619,8 +722,6 @@ only screen and (min-device-pixel-ratio: 2)
 	{
 		margin-top: -10px;
 	}
-
-
 }
 
 /*
