@@ -859,9 +859,9 @@ only screen and (min-device-pixel-ratio: 2)
 
 	#current-hero
 	{
-		margin-top: -400px;
 		width: 355px;
 		height: 744px;
+		margin: -410px 0 0 8%;
 
 		background-size: 100% 100%;
 	}
@@ -888,6 +888,12 @@ only screen and (min-device-pixel-ratio: 2)
 	#c2
 	{
 		-webkit-background-size: 500px 667px;
+	}
+
+	#kkgridview-background
+	{
+		background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.15)), url('../i/kkgridview-blueprint@2x.png');
+		background-size: 100% 100%, 70px 70px;
 	}
 }
 
