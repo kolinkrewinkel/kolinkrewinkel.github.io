@@ -859,9 +859,9 @@ only screen and (min-device-pixel-ratio: 2)
 
 	#current-hero
 	{
-		margin-top: -400px;
 		width: 355px;
 		height: 744px;
+		margin: -410px 0 0 8%;
 
 		background-size: 100% 100%;
 	}
