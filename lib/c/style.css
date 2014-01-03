@@ -135,7 +135,7 @@ body
 	float: left;
 	margin-bottom: 8px;
 	
-	background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=160');
+	background: url('http://en.gravatar.com/userimage/13575131/ae484af97f0fb6d88a1e1fbcf8c0d6d9.png?size=160');
 	box-shadow: 0 1px 2px rgba(0,0,0,0.62);
 }
 
@@ -802,7 +802,7 @@ only screen and (min-device-pixel-ratio: 2)
 
 	#avatar
 	{
-		background: url('https://secure.gravatar.com/avatar/a21dd569e8a375b44b0dcc0e3c12c3f6?s=320');
+		background: url('http://en.gravatar.com/userimage/13575131/ae484af97f0fb6d88a1e1fbcf8c0d6d9.png?size=320');
 		background-size: 100% 100%;
 	}
 
