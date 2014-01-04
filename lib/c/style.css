@@ -896,6 +896,12 @@ only screen and (min-device-pixel-ratio: 2)
 		background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.15)), url('../i/kkgridview-blueprint@2x.png');
 		background-size: 100% 100%, 70px 70px;
 	}
+
+	#kkgridview-hero
+	{
+		background: url('../i/kkgridview-hero@2x.jpg') center center no-repeat;
+		background-size: 315px 420px;
+	}
 }
 
 /*
