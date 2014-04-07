@@ -452,6 +452,11 @@ body
 	left: 370px;	
 	bottom: 40px;
 	width: 260px;	
+
+	color: rgba(230, 230, 230, 1);
+	font-style: normal;
+	text-decoration: none;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 #polychromatic-title
