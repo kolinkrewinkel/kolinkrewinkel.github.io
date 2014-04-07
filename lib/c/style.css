@@ -380,6 +380,8 @@ body
 	height: 100%;
 
 	z-index: -10;
+
+	background-attachment: fixed !important;
 }
 
 .work-container
@@ -803,6 +805,8 @@ body
 .touch .work-background
 {
 	position: absolute;
+
+	background-attachment: scroll !important;
 }
 
 .touch .work, .touch .work-container
