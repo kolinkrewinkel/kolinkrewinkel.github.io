@@ -348,7 +348,7 @@ body
 	padding: 0;
 	width: 100%;
 	max-width: 100%; 
-	height: 400%; /* 100 * number of panels */
+	height: 500%; /* 100 * number of panels */
 
 	list-style: none;
 	overflow-x: hidden;
@@ -364,7 +364,7 @@ body
 	left: 0;
 	width: 100%;
 	max-width: 100%;
-	height: 25%;
+	height: 20%;
 	margin: 0;
 	padding: 0;
 
@@ -425,6 +425,50 @@ body
 /* Portfolio Items */
 
 /* Facebook */
+
+#polychromatic-background
+{
+	background: black url('../i/polychromatic.png') no-repeat center center scroll;
+}
+
+#polychromatic
+{
+	font-family: 'Myriad Pro', 'Lucida Grande', 'HelveticaNeue', 'Helvetica', Arial, Verdana, sans-serif;
+	color: white;
+}
+
+#polychromatic-logo
+{
+	/*float: left;*/
+	width: 128px;
+	height: 128px;
+
+	background: url('../i/polychromatic-plugin-icon.png') center center;
+}
+
+#polychromatic-description
+{
+	position: absolute;
+	left: 370px;	
+	bottom: 40px;
+	width: 260px;	
+}
+
+#polychromatic-title
+{
+	margin: 10px 0 0 0;
+	font-weight: bold;
+	font-size: 1.75em;
+}
+
+#polychromatic-subtitle
+{
+	color: rgba(250, 250, 250, 1);
+	margin: 0;
+
+	font-size: 1.1em;
+}
+
 
 #facebook-background
 {
