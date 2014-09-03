@@ -162,8 +162,8 @@ body
 #contact-links
 {
 	position: absolute;
-	left: 60px;
-	right: 60px;
+	left: 80px;
+	right: 80px;
 	height: 20px;
 	margin: 8px 0 0 0;
 	padding: 0;
@@ -177,7 +177,7 @@ body
 {
 	position: relative;
 	float: left;
-	width: 33.3%;
+	width: 50%;
 	height: 100%;
 	margin: 0;
 
