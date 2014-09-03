@@ -220,6 +220,23 @@ body
 	background: url('../i/mail-logo.png') no-repeat center top;
 }
 
+#resume-link
+{
+	position: absolute;
+	margin-top: 48px;
+	width: 100%;
+	text-align: center;
+
+	text-decoration: none;
+	color: rgb(8, 122, 255);
+	opacity: 1;
+}
+
+#resume-link:hover
+{
+	color: rgb(0, 178, 255);
+}
+
 #bio-extended
 {
 	position: fixed;
