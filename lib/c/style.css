@@ -71,72 +71,14 @@ body
 	margin-top: 0;
 }
 
-.thin-arrow
-{
-	position: relative;
-	float: left;
-	top: 0;
-	width: 42px;
-	height: 160px;
-
-	opacity: 0.6;
-
-	-webkit-transition: all 0.2s;
-}
-
-#reveal-arrow
-{
-	background: url('../i/reveal-arrow.png') center center no-repeat;
-}
-
-#reveal-arrow:hover
-{
-	-webkit-transform: translate(1px, 0px);
-	opacity: 0.9;
-
-	cursor: pointer;
-}
-
-#hide-arrow
-{
-	opacity: 0;
-	visibility: hidden;
-
-	background: url('../i/hide-arrow.png') center center no-repeat;
-}
-
-.expanded-bio #hide-arrow:hover
-{
-	opacity: 0.9 !important;
-	-webkit-transform: translate(-1px, 0px) !important;
-
-	cursor: pointer;
-}
-
-.expanded-bio #hide-arrow
-{
-	opacity: 0.6;
-	visibility: visible;
-
-	z-index: 9999;
-}
-
-.expanded-bio #reveal-arrow
-{
-	opacity: 0;
-	visibility: hidden;
-}
-
 #avatar
 {
 	position: relative;
 	width: 160px;
 	height: 160px;
-	float: left;
-	margin-bottom: 8px;
+	margin: 0 42px 8px 42px;
 	
 	background: url('https://avatars3.githubusercontent.com/u/143944?s=160');
-	box-shadow: 0 1px 2px rgba(0,0,0,0.62);
 }
 
 #name, #work {
@@ -275,51 +217,6 @@ body
 #longform-bio .bold
 {
 	font-weight: bold;
-}
-
-#cover-images
-{
-	position: absolute;
-	width: 40%;
-	right: 0;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-
-	opacity: 0;
-
-	list-style: none;
-
-	-webkit-transition: all 1s 2.5s;
-}
-
-.expanded-bio #cover-images
-{
-	opacity: 0.333;
-}
-
-.cover-image
-{
-	position: relative;
-	float: left;
-	width: 100%;
-	height: 50%;
-
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-#c1
-{
-	background: url('../i/c1.jpg') no-repeat 20% 20%;
-}
-
-#c2
-{
-	background: url('../i/c2.jpg') no-repeat center center;
-
 }
 
 .expanded-bio #longform-bio
@@ -812,55 +709,45 @@ body
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-/*
- *
- *  Touch Devices
- *	Discussion: Will not support (or at least, well) scrolling animations, so we make the panels very literal and put them in order, eliminating potentially laggy cross-fades and tweening.
- * 
- */
-
-.touch .work-background
+.work-background
 {
 	position: absolute;
 
 	background-attachment: scroll !important;
 }
 
-.touch .work, .touch .work-container
+.work, .work-container
 {
 	overflow: hidden !important;
 }
 
-.touch #hint-arrow
+#hint-arrow
 {
 	display: none;
 }
 
-.touch #stream-hero
+#stream-hero
 {
 	margin-top: -1400px;
 }
 
-.touch .work
+.work
 {
 	-webkit-transition: opacity 0.6s;
 }
 
-.touch.expanded-bio .work
+.expanded-bio .work
 {
 	opacity: 0;
 }
 
-.touch.expanded-bio #portfolio
+.expanded-bio #portfolio
 {
 	top: 0 !important;
 }
 
 /*
- *
  *  Retina Displays
- *	Discussion: Are gorgeous.
- * 
  */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -875,18 +762,6 @@ only screen and (min-device-pixel-ratio: 2)
 	{
 		background: url('https://avatars3.githubusercontent.com/u/143944?s=320');
 		background-size: 100% 100%;
-	}
-
-	#reveal-arrow
-	{
-		background: url('../i/reveal-arrow@2x.png') center center no-repeat;
-		background-size: 12px 26px;
-	}
-
-	#hide-arrow
-	{		
-		background: url('../i/hide-arrow@2x.png') center center no-repeat;
-		background-size: 12px 26px;
 	}
 
 	#twitter
@@ -975,10 +850,7 @@ only screen and (min-device-pixel-ratio: 2)
 }
 
 /*
- *
  *  Responsive
- *	Discussion: Math is just too simple.
- * 
  */
 
 @media only screen 
