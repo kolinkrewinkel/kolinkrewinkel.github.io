@@ -777,6 +777,7 @@ body {
     min-width: 0;
   }
 
+  #polychromatic-description,
   #stream-description,
   #current-description {
     /*top: 16px;*/
