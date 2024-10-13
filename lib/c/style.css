@@ -136,7 +136,7 @@ body {
   background: url("../i/mail-logo.png") no-repeat center top;
 }
 
-#resume-link {
+#linkedin-link {
   position: absolute;
   margin-top: 48px;
   width: 100%;
@@ -147,7 +147,7 @@ body {
   opacity: 1;
 }
 
-#resume-link:hover {
+#linkedin-link:hover {
   color: rgb(0, 178, 255);
 }
 
